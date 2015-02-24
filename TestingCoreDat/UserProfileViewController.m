@@ -71,25 +71,39 @@
 
 - (void)addLikeToShow:(TVShowEntity *)show
 {
-    NSNumber *likes = self.showLikes[show.showId];
-    if (!likes)
+//    NSNumber *likes = self.showLikes[show.showId];
+//    if (!likes)
+//    {
+//        likes = @(0);
+//    }
+//    
+//    likes = @([likes integerValue] + 1);
+//    
+//    [self.showLikes setObject:likes forKey:show.showId];
+    UserEntity *currentUser = [self getCurrentUser];
+    if ([show.likedBy containsObject:currentUser])
     {
-        likes = @(0);
+        [show removeLikedByObject:currentUser];
     }
-    
-    likes = @([likes integerValue] + 1);
-    
-    [self.showLikes setObject:likes forKey:show.showId];
+    else
+    {
+        [show addLikedByObject:currentUser];
+    }
+    NSError *error;
+    [self.managedObjectContext save:&error];
 }
 
 - (NSNumber *)likesForShow:(TVShowEntity *)show
 {
-    NSNumber *likes = [self.showLikes objectForKey:show.showId];
-    if (!likes)
-    {
-        return 0;
-    }
-    return likes;
+//    NSNumber *likes = [self.showLikes objectForKey:show.showId];
+//    if (!likes)
+//    {
+//        return 0;
+//    }
+//    return likes;
+    
+    return @(show.likedBy.count);
+    
 }
 
 - (NSString *)likesPlistPath
@@ -101,6 +115,20 @@
 - (void)saveLikes
 {
     [self.showLikes writeToFile:[self likesPlistPath] atomically:YES];
+}
+
+- (UserEntity *)getCurrentUser
+{
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([UserEntity class])];
+    NSError *error;
+    NSArray *users = [self.managedObjectContext executeFetchRequest:select error:&error];
+    
+    if (users.count)
+    {
+        return [users firstObject];
+    }
+    
+    return nil;
 }
 
 #pragma mark - TableView delegate and datasource methods.
@@ -129,7 +157,7 @@
     [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSLog(@"likes for show %@: %@", selectedShow.showId, [self likesForShow:selectedShow].stringValue);
-    [self saveLikes];
+    //[self saveLikes];
 }
 
 @end
