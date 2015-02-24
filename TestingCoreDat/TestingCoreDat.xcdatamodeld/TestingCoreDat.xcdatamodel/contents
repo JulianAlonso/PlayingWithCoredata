@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14C109" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="TVShowEntity" representedClassName="TVShowEntity" syncable="YES">
+        <attribute name="showDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="likedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="likedShows" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPassword" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="likedShows" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TVShowEntity" inverseName="likedBy" inverseEntity="TVShowEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="TVShowEntity" positionX="-54" positionY="18" width="128" height="103"/>
+    </elements>
 </model>

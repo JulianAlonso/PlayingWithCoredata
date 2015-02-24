@@ -15,6 +15,10 @@
 		01EF0C631A9C742100A84780 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01EF0C621A9C742100A84780 /* Images.xcassets */; };
 		01EF0C661A9C742100A84780 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EF0C641A9C742100A84780 /* LaunchScreen.xib */; };
 		01EF0C721A9C742100A84780 /* TestingCoreDatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C711A9C742100A84780 /* TestingCoreDatTests.m */; };
+		01EF0C7D1A9C794D00A84780 /* TVShowEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C7C1A9C794D00A84780 /* TVShowEntity.m */; };
+		01EF0C801A9C794D00A84780 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C7F1A9C794D00A84780 /* UserEntity.m */; };
+		01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C821A9C7E5100A84780 /* CoreDataStack.m */; };
+		01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C851A9C948800A84780 /* UserProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,14 @@
 		01EF0C6B1A9C742100A84780 /* TestingCoreDatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingCoreDatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF0C701A9C742100A84780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01EF0C711A9C742100A84780 /* TestingCoreDatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingCoreDatTests.m; sourceTree = "<group>"; };
+		01EF0C7B1A9C794D00A84780 /* TVShowEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowEntity.h; sourceTree = "<group>"; };
+		01EF0C7C1A9C794D00A84780 /* TVShowEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowEntity.m; sourceTree = "<group>"; };
+		01EF0C7E1A9C794D00A84780 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		01EF0C7F1A9C794D00A84780 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		01EF0C811A9C7E5100A84780 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		01EF0C821A9C7E5100A84780 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		01EF0C841A9C948800A84780 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		01EF0C851A9C948800A84780 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +97,21 @@
 			children = (
 				01EF0C561A9C742100A84780 /* AppDelegate.h */,
 				01EF0C571A9C742100A84780 /* AppDelegate.m */,
+				01EF0C811A9C7E5100A84780 /* CoreDataStack.h */,
+				01EF0C821A9C7E5100A84780 /* CoreDataStack.m */,
 				01EF0C5C1A9C742100A84780 /* ViewController.h */,
 				01EF0C5D1A9C742100A84780 /* ViewController.m */,
 				01EF0C5F1A9C742100A84780 /* Main.storyboard */,
 				01EF0C621A9C742100A84780 /* Images.xcassets */,
 				01EF0C641A9C742100A84780 /* LaunchScreen.xib */,
 				01EF0C591A9C742100A84780 /* TestingCoreDat.xcdatamodeld */,
+				01EF0C7E1A9C794D00A84780 /* UserEntity.h */,
+				01EF0C7F1A9C794D00A84780 /* UserEntity.m */,
+				01EF0C7B1A9C794D00A84780 /* TVShowEntity.h */,
+				01EF0C7C1A9C794D00A84780 /* TVShowEntity.m */,
 				01EF0C521A9C742100A84780 /* Supporting Files */,
+				01EF0C841A9C948800A84780 /* UserProfileViewController.h */,
+				01EF0C851A9C948800A84780 /* UserProfileViewController.m */,
 			);
 			path = TestingCoreDat;
 			sourceTree = "<group>";
@@ -224,8 +244,12 @@
 			files = (
 				01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */,
 				01EF0C551A9C742100A84780 /* main.m in Sources */,
+				01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */,
 				01EF0C5E1A9C742100A84780 /* ViewController.m in Sources */,
+				01EF0C801A9C794D00A84780 /* UserEntity.m in Sources */,
+				01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */,
 				01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */,
+				01EF0C7D1A9C794D00A84780 /* TVShowEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
