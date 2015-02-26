@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		01EE4A7D1A9F19B700CB4E04 /* TVshowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */; };
 		01EE4A7E1A9F19B700CB4E04 /* TVshowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */; };
+		01EE4A821A9F37AA00CB4E04 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A811A9F37AA00CB4E04 /* ImageDownloader.m */; };
+		01EE4A851A9F3D1000CB4E04 /* ImagesCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A841A9F3D1000CB4E04 /* ImagesCacheManager.m */; };
 		01EF0C551A9C742100A84780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C541A9C742100A84780 /* main.m */; };
 		01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C571A9C742100A84780 /* AppDelegate.m */; };
 		01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C591A9C742100A84780 /* TestingCoreDat.xcdatamodeld */; };
@@ -43,6 +45,10 @@
 		01EE4A7A1A9F19B700CB4E04 /* TVshowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVshowTableViewCell.h; sourceTree = "<group>"; };
 		01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVshowTableViewCell.m; sourceTree = "<group>"; };
 		01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TVshowTableViewCell.xib; sourceTree = "<group>"; };
+		01EE4A801A9F37AA00CB4E04 /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		01EE4A811A9F37AA00CB4E04 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		01EE4A831A9F3D1000CB4E04 /* ImagesCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCacheManager.h; sourceTree = "<group>"; };
+		01EE4A841A9F3D1000CB4E04 /* ImagesCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCacheManager.m; sourceTree = "<group>"; };
 		01EF0C4F1A9C742100A84780 /* TestingCoreDat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingCoreDat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF0C531A9C742100A84780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01EF0C541A9C742100A84780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +107,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01EE4A7F1A9F358000CB4E04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01EE4A801A9F37AA00CB4E04 /* ImageDownloader.h */,
+				01EE4A811A9F37AA00CB4E04 /* ImageDownloader.m */,
+				01EE4A871A9F3D2900CB4E04 /* CachesManager */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		01EE4A871A9F3D2900CB4E04 /* CachesManager */ = {
+			isa = PBXGroup;
+			children = (
+				01EE4A831A9F3D1000CB4E04 /* ImagesCacheManager.h */,
+				01EE4A841A9F3D1000CB4E04 /* ImagesCacheManager.m */,
+			);
+			name = CachesManager;
+			sourceTree = "<group>";
+		};
 		01EF0C461A9C742100A84780 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +149,7 @@
 		01EF0C511A9C742100A84780 /* TestingCoreDat */ = {
 			isa = PBXGroup;
 			children = (
+				01EE4A7F1A9F358000CB4E04 /* Services */,
 				01FAE2101A9E125800C36BA9 /* Network */,
 				01EF0C561A9C742100A84780 /* AppDelegate.h */,
 				01EF0C571A9C742100A84780 /* AppDelegate.m */,
@@ -359,6 +385,7 @@
 				01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */,
 				01EF0C551A9C742100A84780 /* main.m in Sources */,
 				01FAE20B1A9DC7A600C36BA9 /* BlockBarButtonItem.m in Sources */,
+				01EE4A851A9F3D1000CB4E04 /* ImagesCacheManager.m in Sources */,
 				01FAE2131A9E134600C36BA9 /* AFNRequestManager.m in Sources */,
 				01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */,
 				01EF0C5E1A9C742100A84780 /* ViewController.m in Sources */,
@@ -367,6 +394,7 @@
 				01FAE20E1A9DE56A00C36BA9 /* UIAlertView+Blocks.m in Sources */,
 				01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */,
 				01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */,
+				01EE4A821A9F37AA00CB4E04 /* ImageDownloader.m in Sources */,
 				01FAE2081A9DC6B400C36BA9 /* TVShowDetailViewController.m in Sources */,
 				01EF0C7D1A9C794D00A84780 /* TVShowEntity.m in Sources */,
 			);

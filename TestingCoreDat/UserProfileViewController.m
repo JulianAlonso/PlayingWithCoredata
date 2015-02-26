@@ -12,6 +12,7 @@
 #import "TVShowDetailViewController.h"
 #import "TVShowsProvider.h"
 #import "TVshowTableViewCell.h"
+#import "ImageDownloader.h"
 
 @interface UserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -132,15 +133,21 @@
     cell.showTitleLabel.text = show.showTitle;
 
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        UIImage *downloadedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"]]];
-        //sleep(1);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.showImageView.image = downloadedImage;
-        });
-        
-    });
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        UIImage *downloadedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:
+//        //sleep(1);
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            cell.showImageView.image = downloadedImage;
+//        });
+//        
+//    });
+
+    ImageDownloader *imageDownloader = [ImageDownloader sharedInstance];
+    [imageDownloader getImageFromUrl:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"]
+                         completion:^(UIImage *image) {
+                             cell.showImageView.image = image;
+                         }];
     
     return cell;
 }
@@ -164,6 +171,11 @@
     detailViewController.show = selectedShow;
     
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+- (void)dealloc
+{
+    NSLog(@"mueroo");
 }
 
 @end
