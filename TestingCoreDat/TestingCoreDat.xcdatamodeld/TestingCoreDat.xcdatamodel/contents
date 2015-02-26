@@ -13,7 +13,7 @@
         <relationship name="likedShows" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TVShowEntity" inverseName="likedBy" inverseEntity="TVShowEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TVShowEntity" positionX="-54" positionY="18" width="128" height="103"/>
-        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="TVShowEntity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="UserEntity" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

@@ -17,7 +17,7 @@ static NSString *const kLastLogin = @"kLastLogin";
 @property (weak, nonatomic) IBOutlet UITextField *userInput;
 @property (weak, nonatomic) IBOutlet UITextField *passwordInput;
 
-@property (nonatomic, strong) UserProfileViewController *userProfileViewController;
+@property (nonatomic, strong) UINavigationController *navigationUserProfileController;
 
 @end
 
@@ -81,12 +81,14 @@ static NSString *const kLastLogin = @"kLastLogin";
 
 - (void)presentUserProfile
 {
-    self.userProfileViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"userProfile"];
+    UserProfileViewController *userProfileViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"userProfile"];
     
-    self.userProfileViewController.managedObjectContext = self.managedObjectContext;
-    self.userProfileViewController.delegate = self;
+    userProfileViewController.managedObjectContext = self.managedObjectContext;
+    userProfileViewController.delegate = self;
     
-    [self presentViewController:self.userProfileViewController animated:YES completion:nil];
+    self.navigationUserProfileController = [[UINavigationController alloc] initWithRootViewController:userProfileViewController];
+    
+    [self presentViewController:self.navigationUserProfileController animated:YES completion:nil];
 }
 
 - (void)saveLastLoginNow
@@ -156,7 +158,7 @@ static NSString *const kLastLogin = @"kLastLogin";
     {
         [self removeLastLogin];
         [self cleanTempDirectory];
-        [self.userProfileViewController dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationUserProfileController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

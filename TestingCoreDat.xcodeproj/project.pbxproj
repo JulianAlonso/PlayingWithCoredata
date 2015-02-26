@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01EE4A7D1A9F19B700CB4E04 /* TVshowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */; };
+		01EE4A7E1A9F19B700CB4E04 /* TVshowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */; };
 		01EF0C551A9C742100A84780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C541A9C742100A84780 /* main.m */; };
 		01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C571A9C742100A84780 /* AppDelegate.m */; };
 		01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C591A9C742100A84780 /* TestingCoreDat.xcdatamodeld */; };
@@ -19,6 +21,12 @@
 		01EF0C801A9C794D00A84780 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C7F1A9C794D00A84780 /* UserEntity.m */; };
 		01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C821A9C7E5100A84780 /* CoreDataStack.m */; };
 		01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C851A9C948800A84780 /* UserProfileViewController.m */; };
+		01FAE2081A9DC6B400C36BA9 /* TVShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAE2071A9DC6B400C36BA9 /* TVShowDetailViewController.m */; };
+		01FAE20B1A9DC7A600C36BA9 /* BlockBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAE20A1A9DC7A600C36BA9 /* BlockBarButtonItem.m */; };
+		01FAE20E1A9DE56A00C36BA9 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAE20D1A9DE56A00C36BA9 /* UIAlertView+Blocks.m */; };
+		01FAE2131A9E134600C36BA9 /* AFNRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAE2121A9E134600C36BA9 /* AFNRequestManager.m */; };
+		01FAE2171A9E15DA00C36BA9 /* TVShowsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FAE2161A9E15DA00C36BA9 /* TVShowsProvider.m */; };
+		CF439C13C0F245EC3E622A08 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B18027D31E157EE2C906DD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01EE4A7A1A9F19B700CB4E04 /* TVshowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVshowTableViewCell.h; sourceTree = "<group>"; };
+		01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVshowTableViewCell.m; sourceTree = "<group>"; };
+		01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TVshowTableViewCell.xib; sourceTree = "<group>"; };
 		01EF0C4F1A9C742100A84780 /* TestingCoreDat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingCoreDat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF0C531A9C742100A84780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01EF0C541A9C742100A84780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +65,21 @@
 		01EF0C821A9C7E5100A84780 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		01EF0C841A9C948800A84780 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
 		01EF0C851A9C948800A84780 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		01FAE2061A9DC6B400C36BA9 /* TVShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowDetailViewController.h; sourceTree = "<group>"; };
+		01FAE2071A9DC6B400C36BA9 /* TVShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowDetailViewController.m; sourceTree = "<group>"; };
+		01FAE2091A9DC7A600C36BA9 /* BlockBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockBarButtonItem.h; sourceTree = "<group>"; };
+		01FAE20A1A9DC7A600C36BA9 /* BlockBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockBarButtonItem.m; sourceTree = "<group>"; };
+		01FAE20C1A9DE56A00C36BA9 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		01FAE20D1A9DE56A00C36BA9 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		01FAE20F1A9E096E00C36BA9 /* Prefix-TestingCoreDat.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prefix-TestingCoreDat.pch"; sourceTree = "<group>"; };
+		01FAE2111A9E134600C36BA9 /* AFNRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNRequestManager.h; sourceTree = "<group>"; };
+		01FAE2121A9E134600C36BA9 /* AFNRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNRequestManager.m; sourceTree = "<group>"; };
+		01FAE2141A9E159A00C36BA9 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		01FAE2151A9E15DA00C36BA9 /* TVShowsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsProvider.h; sourceTree = "<group>"; };
+		01FAE2161A9E15DA00C36BA9 /* TVShowsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowsProvider.m; sourceTree = "<group>"; };
+		3FCFC7DB1905B1C883D6127C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B6835FAB08A8CB05AE19AD4D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D7B18027D31E157EE2C906DD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF439C13C0F245EC3E622A08 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +107,8 @@
 				01EF0C511A9C742100A84780 /* TestingCoreDat */,
 				01EF0C6E1A9C742100A84780 /* TestingCoreDatTests */,
 				01EF0C501A9C742100A84780 /* Products */,
+				DFEF34D60BE1F49DB371B2D4 /* Pods */,
+				6272C3F870ADC8643F2B20CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +124,7 @@
 		01EF0C511A9C742100A84780 /* TestingCoreDat */ = {
 			isa = PBXGroup;
 			children = (
+				01FAE2101A9E125800C36BA9 /* Network */,
 				01EF0C561A9C742100A84780 /* AppDelegate.h */,
 				01EF0C571A9C742100A84780 /* AppDelegate.m */,
 				01EF0C811A9C7E5100A84780 /* CoreDataStack.h */,
@@ -112,6 +142,16 @@
 				01EF0C521A9C742100A84780 /* Supporting Files */,
 				01EF0C841A9C948800A84780 /* UserProfileViewController.h */,
 				01EF0C851A9C948800A84780 /* UserProfileViewController.m */,
+				01FAE2061A9DC6B400C36BA9 /* TVShowDetailViewController.h */,
+				01FAE2071A9DC6B400C36BA9 /* TVShowDetailViewController.m */,
+				01FAE2091A9DC7A600C36BA9 /* BlockBarButtonItem.h */,
+				01FAE20A1A9DC7A600C36BA9 /* BlockBarButtonItem.m */,
+				01FAE20C1A9DE56A00C36BA9 /* UIAlertView+Blocks.h */,
+				01FAE20D1A9DE56A00C36BA9 /* UIAlertView+Blocks.m */,
+				01FAE2181A9E15E400C36BA9 /* Providers */,
+				01EE4A7A1A9F19B700CB4E04 /* TVshowTableViewCell.h */,
+				01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */,
+				01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */,
 			);
 			path = TestingCoreDat;
 			sourceTree = "<group>";
@@ -121,6 +161,7 @@
 			children = (
 				01EF0C531A9C742100A84780 /* Info.plist */,
 				01EF0C541A9C742100A84780 /* main.m */,
+				01FAE20F1A9E096E00C36BA9 /* Prefix-TestingCoreDat.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -142,6 +183,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		01FAE2101A9E125800C36BA9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01FAE2111A9E134600C36BA9 /* AFNRequestManager.h */,
+				01FAE2121A9E134600C36BA9 /* AFNRequestManager.m */,
+				01FAE2141A9E159A00C36BA9 /* RequestManager.h */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		01FAE2181A9E15E400C36BA9 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				01FAE2151A9E15DA00C36BA9 /* TVShowsProvider.h */,
+				01FAE2161A9E15DA00C36BA9 /* TVShowsProvider.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		6272C3F870ADC8643F2B20CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7B18027D31E157EE2C906DD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFEF34D60BE1F49DB371B2D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6835FAB08A8CB05AE19AD4D /* Pods.debug.xcconfig */,
+				3FCFC7DB1905B1C883D6127C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01EF0C751A9C742100A84780 /* Build configuration list for PBXNativeTarget "TestingCoreDat" */;
 			buildPhases = (
+				C0561AFAF1089F1A7CA43375 /* Check Pods Manifest.lock */,
 				01EF0C4B1A9C742100A84780 /* Sources */,
 				01EF0C4C1A9C742100A84780 /* Frameworks */,
 				01EF0C4D1A9C742100A84780 /* Resources */,
+				665C56C3AA816E42C85CB13D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +303,7 @@
 			files = (
 				01EF0C611A9C742100A84780 /* Main.storyboard in Resources */,
 				01EF0C661A9C742100A84780 /* LaunchScreen.xib in Resources */,
+				01EE4A7E1A9F19B700CB4E04 /* TVshowTableViewCell.xib in Resources */,
 				01EF0C631A9C742100A84780 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,18 +317,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		665C56C3AA816E42C85CB13D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0561AFAF1089F1A7CA43375 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		01EF0C4B1A9C742100A84780 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EE4A7D1A9F19B700CB4E04 /* TVshowTableViewCell.m in Sources */,
 				01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */,
 				01EF0C551A9C742100A84780 /* main.m in Sources */,
+				01FAE20B1A9DC7A600C36BA9 /* BlockBarButtonItem.m in Sources */,
+				01FAE2131A9E134600C36BA9 /* AFNRequestManager.m in Sources */,
 				01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */,
 				01EF0C5E1A9C742100A84780 /* ViewController.m in Sources */,
 				01EF0C801A9C794D00A84780 /* UserEntity.m in Sources */,
+				01FAE2171A9E15DA00C36BA9 /* TVShowsProvider.m in Sources */,
+				01FAE20E1A9DE56A00C36BA9 /* UIAlertView+Blocks.m in Sources */,
 				01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */,
 				01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */,
+				01FAE2081A9DC6B400C36BA9 /* TVShowDetailViewController.m in Sources */,
 				01EF0C7D1A9C794D00A84780 /* TVShowEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,8 +488,11 @@
 		};
 		01EF0C761A9C742100A84780 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6835FAB08A8CB05AE19AD4D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestingCoreDat/Prefix-TestingCoreDat.pch";
 				INFOPLIST_FILE = TestingCoreDat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,8 +501,11 @@
 		};
 		01EF0C771A9C742100A84780 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FCFC7DB1905B1C883D6127C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestingCoreDat/Prefix-TestingCoreDat.pch";
 				INFOPLIST_FILE = TestingCoreDat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +565,7 @@
 				01EF0C771A9C742100A84780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01EF0C781A9C742100A84780 /* Build configuration list for PBXNativeTarget "TestingCoreDatTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +574,7 @@
 				01EF0C7A1A9C742100A84780 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

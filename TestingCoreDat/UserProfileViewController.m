@@ -9,6 +9,9 @@
 #import "UserProfileViewController.h"
 #import "UserEntity.h"
 #import "TVShowEntity.h"
+#import "TVShowDetailViewController.h"
+#import "TVShowsProvider.h"
+#import "TVshowTableViewCell.h"
 
 @interface UserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +20,8 @@
 @property (nonatomic, strong) NSArray *mainShows;
 
 @property (nonatomic, strong) NSMutableDictionary *showLikes;
+
+@property (nonatomic, strong) TVShowsProvider *showsProvider;
 
 @end
 
@@ -31,20 +36,22 @@
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
     
-    [self.mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.mainTableView registerNib:[UINib nibWithNibName:@"TVshowTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"cell"];
+    
     
     NSMutableDictionary *showLikes = [NSMutableDictionary dictionaryWithContentsOfFile:[self likesPlistPath]];
     self.showLikes = showLikes ? showLikes : [NSMutableDictionary dictionary];
     
-    [self loadMainShows];
+    self.showsProvider = [[TVShowsProvider alloc]init];
     
+    [self loadMainShows];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - ActionButtons methods.
 - (IBAction)logoutButtonAction:(id)sender
 {
     [self.delegate dismissUserProfileViewcontroller];
@@ -53,33 +60,25 @@
 #pragma mark - Own methods.
 - (void)loadMainShows
 {
-    TVShowEntity *show1 = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([TVShowEntity class]) inManagedObjectContext:self.managedObjectContext];
-    show1.showId = @"1";
-    show1.showTitle = @"breakingBad";
+    //TODO: move to other class.
     
-    TVShowEntity *show2 = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([TVShowEntity class]) inManagedObjectContext:self.managedObjectContext];
-    show2.showId = @"2";
-    show2.showTitle = @"Mad men";
+    NSError *error;
     
-    TVShowEntity *show3 = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([TVShowEntity class]) inManagedObjectContext:self.managedObjectContext];
-    show3.showId = @"3";
-    show3.showTitle = @"SOA";
-    
-    self.mainShows = [NSArray arrayWithObjects:show1, show2, show3, nil];
-    
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([TVShowEntity class])];
+    NSArray *result = [self.managedObjectContext executeFetchRequest:select error:&error];
+
+    if (result.count)
+    {
+        self.mainShows = result;
+    }
+    else
+    {
+        self.mainShows = [NSArray array];
+    }
 }
 
 - (void)addLikeToShow:(TVShowEntity *)show
 {
-//    NSNumber *likes = self.showLikes[show.showId];
-//    if (!likes)
-//    {
-//        likes = @(0);
-//    }
-//    
-//    likes = @([likes integerValue] + 1);
-//    
-//    [self.showLikes setObject:likes forKey:show.showId];
     UserEntity *currentUser = [self getCurrentUser];
     if ([show.likedBy containsObject:currentUser])
     {
@@ -95,15 +94,7 @@
 
 - (NSNumber *)likesForShow:(TVShowEntity *)show
 {
-//    NSNumber *likes = [self.showLikes objectForKey:show.showId];
-//    if (!likes)
-//    {
-//        return 0;
-//    }
-//    return likes;
-    
     return @(show.likedBy.count);
-    
 }
 
 - (NSString *)likesPlistPath
@@ -134,11 +125,22 @@
 #pragma mark - TableView delegate and datasource methods.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.mainTableView dequeueReusableCellWithIdentifier:@"cell"];
+    TVshowTableViewCell *cell = [self.mainTableView dequeueReusableCellWithIdentifier:@"cell"];
     
     TVShowEntity *show = (TVShowEntity *)self.mainShows[indexPath.row];
     
-    cell.textLabel.text = show.showTitle;
+    cell.showTitleLabel.text = show.showTitle;
+
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        UIImage *downloadedImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"]]];
+        //sleep(1);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.showImageView.image = downloadedImage;
+        });
+        
+    });
     
     return cell;
 }
@@ -148,16 +150,20 @@
     return self.mainShows.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 245.0f;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TVShowEntity *selectedShow = (TVShowEntity *)self.mainShows[indexPath.row];
+
+    TVShowDetailViewController *detailViewController = (TVShowDetailViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"tvShowDetailViewController"];
     
-    [self addLikeToShow:selectedShow];
+    detailViewController.show = selectedShow;
     
-    [self.mainTableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    NSLog(@"likes for show %@: %@", selectedShow.showId, [self likesForShow:selectedShow].stringValue);
-    //[self saveLikes];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

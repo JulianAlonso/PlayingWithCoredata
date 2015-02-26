@@ -1,0 +1,14 @@
+//
+//  Prefix-TestingCoreDat.pch
+//  TestingCoreDat
+//
+//  Created by Julian Alonso on 25/2/15.
+//  Copyright (c) 2015 IronHack. All rights reserved.
+//
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+#import <libextobjc/EXTScope.h>
+#endif
