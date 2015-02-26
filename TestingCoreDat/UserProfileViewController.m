@@ -13,6 +13,7 @@
 #import "TVShowsProvider.h"
 #import "TVshowTableViewCell.h"
 #import "ImageDownloader.h"
+#import "UIImageView+ImageDownload.h"
 
 @interface UserProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -143,11 +144,15 @@
 //        
 //    });
 
-    ImageDownloader *imageDownloader = [ImageDownloader sharedInstance];
-    [imageDownloader getImageFromUrl:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"]
-                         completion:^(UIImage *image) {
-                             cell.showImageView.image = image;
-                         }];
+//    ImageDownloader *imageDownloader = [ImageDownloader sharedInstance];
+//    [imageDownloader getImageFromUrl:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"]
+//                         completion:^(UIImage *image) {
+//                             cell.showImageView.image = image;
+//                         }];
+    
+    [cell.showImageView setImageFromUrl:[NSURL URLWithString:@"http://ecx.images-amazon.com/images/I/31vBd2jzlyL._SY300_.jpg"] completion:^(UIImage *image) {
+        
+    }];
     
     return cell;
 }
@@ -159,7 +164,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 245.0f;
+    return 120.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

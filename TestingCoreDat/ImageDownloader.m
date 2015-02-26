@@ -8,6 +8,7 @@
 
 #import "ImageDownloader.h"
 #import "ImagesCacheManager.h"
+#import "ImageBlockOperation.h"
 
 @interface ImageDownloader ()
 
@@ -65,6 +66,22 @@
         [self.imagesCacheManager saveImage:image withUrl:url];
         
     });
+}
+
+- (ImageBlockOperation *)downloadImageWithUrl:(NSURL *)url
+{
+    __block ImageBlockOperation *downloadOperation;
+    downloadOperation = [ImageBlockOperation blockOperationWithBlock:^{
+        UIImage *image = [self.imagesCacheManager getImage:url];
+        
+        if (!image)
+        {
+            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+            [self.imagesCacheManager saveImage:image withUrl:url];
+        }
+        downloadOperation.image = image;
+    }];
+    return downloadOperation;
 }
 
 @end

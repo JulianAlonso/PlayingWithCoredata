@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class ImageBlockOperation;
+
 @interface ImageDownloader : NSObject
 
 + (instancetype)sharedInstance;
@@ -17,5 +19,7 @@
 @interface ImageDownloader (ImageDownload)
 
 - (void)getImageFromUrl:(NSURL *)url completion:(void(^)(UIImage * image))completionBlock;
+
+- (ImageBlockOperation *)downloadImageWithUrl:(NSURL *)url;
 
 @end

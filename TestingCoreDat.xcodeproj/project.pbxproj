@@ -11,6 +11,8 @@
 		01EE4A7E1A9F19B700CB4E04 /* TVshowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */; };
 		01EE4A821A9F37AA00CB4E04 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A811A9F37AA00CB4E04 /* ImageDownloader.m */; };
 		01EE4A851A9F3D1000CB4E04 /* ImagesCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A841A9F3D1000CB4E04 /* ImagesCacheManager.m */; };
+		01EE4A8B1A9F602800CB4E04 /* UIImageView+ImageDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A8A1A9F602800CB4E04 /* UIImageView+ImageDownload.m */; };
+		01EE4A8E1A9F788500CB4E04 /* ImageBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EE4A8D1A9F788500CB4E04 /* ImageBlockOperation.m */; };
 		01EF0C551A9C742100A84780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C541A9C742100A84780 /* main.m */; };
 		01EF0C581A9C742100A84780 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C571A9C742100A84780 /* AppDelegate.m */; };
 		01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01EF0C591A9C742100A84780 /* TestingCoreDat.xcdatamodeld */; };
@@ -49,6 +51,10 @@
 		01EE4A811A9F37AA00CB4E04 /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		01EE4A831A9F3D1000CB4E04 /* ImagesCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCacheManager.h; sourceTree = "<group>"; };
 		01EE4A841A9F3D1000CB4E04 /* ImagesCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCacheManager.m; sourceTree = "<group>"; };
+		01EE4A891A9F602800CB4E04 /* UIImageView+ImageDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ImageDownload.h"; sourceTree = "<group>"; };
+		01EE4A8A1A9F602800CB4E04 /* UIImageView+ImageDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ImageDownload.m"; sourceTree = "<group>"; };
+		01EE4A8C1A9F788500CB4E04 /* ImageBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBlockOperation.h; sourceTree = "<group>"; };
+		01EE4A8D1A9F788500CB4E04 /* ImageBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBlockOperation.m; sourceTree = "<group>"; };
 		01EF0C4F1A9C742100A84780 /* TestingCoreDat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingCoreDat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01EF0C531A9C742100A84780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01EF0C541A9C742100A84780 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +132,17 @@
 			name = CachesManager;
 			sourceTree = "<group>";
 		};
+		01EE4A881A9F5FFF00CB4E04 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				01FAE20C1A9DE56A00C36BA9 /* UIAlertView+Blocks.h */,
+				01FAE20D1A9DE56A00C36BA9 /* UIAlertView+Blocks.m */,
+				01EE4A891A9F602800CB4E04 /* UIImageView+ImageDownload.h */,
+				01EE4A8A1A9F602800CB4E04 /* UIImageView+ImageDownload.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		01EF0C461A9C742100A84780 = {
 			isa = PBXGroup;
 			children = (
@@ -172,12 +189,13 @@
 				01FAE2071A9DC6B400C36BA9 /* TVShowDetailViewController.m */,
 				01FAE2091A9DC7A600C36BA9 /* BlockBarButtonItem.h */,
 				01FAE20A1A9DC7A600C36BA9 /* BlockBarButtonItem.m */,
-				01FAE20C1A9DE56A00C36BA9 /* UIAlertView+Blocks.h */,
-				01FAE20D1A9DE56A00C36BA9 /* UIAlertView+Blocks.m */,
+				01EE4A881A9F5FFF00CB4E04 /* Categories */,
 				01FAE2181A9E15E400C36BA9 /* Providers */,
 				01EE4A7A1A9F19B700CB4E04 /* TVshowTableViewCell.h */,
 				01EE4A7B1A9F19B700CB4E04 /* TVshowTableViewCell.m */,
 				01EE4A7C1A9F19B700CB4E04 /* TVshowTableViewCell.xib */,
+				01EE4A8C1A9F788500CB4E04 /* ImageBlockOperation.h */,
+				01EE4A8D1A9F788500CB4E04 /* ImageBlockOperation.m */,
 			);
 			path = TestingCoreDat;
 			sourceTree = "<group>";
@@ -387,10 +405,12 @@
 				01FAE20B1A9DC7A600C36BA9 /* BlockBarButtonItem.m in Sources */,
 				01EE4A851A9F3D1000CB4E04 /* ImagesCacheManager.m in Sources */,
 				01FAE2131A9E134600C36BA9 /* AFNRequestManager.m in Sources */,
+				01EE4A8B1A9F602800CB4E04 /* UIImageView+ImageDownload.m in Sources */,
 				01EF0C831A9C7E5100A84780 /* CoreDataStack.m in Sources */,
 				01EF0C5E1A9C742100A84780 /* ViewController.m in Sources */,
 				01EF0C801A9C794D00A84780 /* UserEntity.m in Sources */,
 				01FAE2171A9E15DA00C36BA9 /* TVShowsProvider.m in Sources */,
+				01EE4A8E1A9F788500CB4E04 /* ImageBlockOperation.m in Sources */,
 				01FAE20E1A9DE56A00C36BA9 /* UIAlertView+Blocks.m in Sources */,
 				01EF0C861A9C948800A84780 /* UserProfileViewController.m in Sources */,
 				01EF0C5B1A9C742100A84780 /* TestingCoreDat.xcdatamodeld in Sources */,
